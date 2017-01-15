@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+
+# Remount /dev/shm to avoid chromium running out of diskpace which results in crash
+mount -o remount,size=256M /dev/shm
+
+# permissions
+chown abc:abc \
+	/config
